@@ -1,0 +1,65 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+span {
+  font-family: 'Philosopher', sans-serif;
+  letter-spacing: 0.1rem;
+  padding-top: 1rem;
+}
+
+.cover-title{
+  font-family: 'Kanit', sans-serif;
+  font-size: 100;
+  text-align: center;
+  vertical-align: baseline;
+
+  /* transform:translateY(-500%); */
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.img-darken{
+	transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+
+}
+.img-darken:after {
+    content: '\A';
+    position: absolute;
+		width: 100vw;
+		height: 100vh;
+    top:0;
+		left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+	  -moz-transition: opacity 0.5s;
+}
+
+#jumboCarousel .carousel-caption {
+    right: 58%;
+    text-align: center;
+    max-width: 500px;
+    left: auto;
+    /*top: auto;*/
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
