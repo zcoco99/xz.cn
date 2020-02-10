@@ -7,12 +7,43 @@
 h2{
   font-family: 'Kanit', sans-serif;
 }
+h3{
+  font-family: 'Kanit', sans-serif;
+}
+
 span {
   font-family: 'Philosopher', sans-serif;
   letter-spacing: 0.1rem;
   padding-top: 1rem;
 }
 
+.footer{
+  background-color: #909090;
+  padding-top: 40px;
+}
+
+.section-title{
+  font-family: 'Kanit', sans-serif;
+  align-content: center;
+  vertical-align: baseline;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+.section-title h2{
+  font-size: 3rem;
+}
+
+
+.cover-title h2{
+  font-family: 'Kanit', sans-serif;
+  font-size: 4rem;
+  text-align: left;
+  align-content: center;
+  left:30%;
+  vertical-align: baseline;
+  position:fixed;
+  /* transform:translateY(-500%); */
+}
 
 /*spacing between navbar list items*/
 @media (min-width: 992px){
@@ -28,21 +59,10 @@ span {
   transition: background-color 0.8s linear;
 }
 
-.cover-title h2{
-  font-family: 'Kanit', sans-serif;
-  font-size: 4rem;
-  text-align: left;
-  align-content: center;
-  left:30%;
-  vertical-align: baseline;
-  position:fixed;
-  /* transform:translateY(-500%); */
-}
-
 .carousel-caption {
 z-index:10; /*relative position importance of the caption. higher means more at the front*/
 color:#fff;
-top:50%;
+top:40%;
 left:3rem;
 bottom:auto;
 
@@ -52,7 +72,7 @@ transform:translate(0, -50%);
 }
 
 .carousel-item {
-  height: 100vh;
+  height: 50vh;
   min-height: 300px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -82,19 +102,93 @@ transform:translate(0, -50%);
 	  -moz-transition: opacity 0.5s;
 }
 
-/*---------END OF COVER PAGE---------*/
-
-.container-2 {
-  padding-top: 10rem;
-  padding-bottom: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  vertical-align: baseline;
+/*---------END OF COVER CAROUSEL---------*/
+.about-section{
+  background-image: url("img/london-night.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
-.portfolio-item {
-  height:400px;
-  width:400px;
+
+/*------------END OF ABOUT ME------------*/
+.portfolio-item img{
+  max-height:400px;
+  max-width:400px;
+  height:100%;
   overflow:hidden;
-  position:center;
+  position:relative;
+  object-fit: cover;
+  padding: inherit;
+}
+
+/*-----Fade image at hover and reveal text fly in from top--------*/
+.content{
+  position: relative;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  margin: auto;
+  overflow: hidden;
+
+
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.content-details p{
+  color: #fff;
+
+  font-family: 'Kanit', sans-serif;
+  font-size: 1em;
 }

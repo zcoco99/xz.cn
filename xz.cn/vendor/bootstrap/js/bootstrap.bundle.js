@@ -6,7 +6,7 @@
 
 /* change navbar color on scroll*/
     $(window).scroll(function(){
-    	$('nav').toggleClass('scrolled', $(this).scrollTop() > 700);
+    	$('nav').toggleClass('scrolled', $(this).scrollTop() > 400);
     });
 
 
