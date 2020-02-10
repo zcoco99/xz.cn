@@ -4,19 +4,51 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
 
+h2{
+  font-family: 'Kanit', sans-serif;
+}
 span {
   font-family: 'Philosopher', sans-serif;
   letter-spacing: 0.1rem;
   padding-top: 1rem;
 }
 
-.cover-title{
-  font-family: 'Kanit', sans-serif;
-  font-size: 100;
-  text-align: center;
-  vertical-align: baseline;
 
+/*spacing between navbar list items*/
+@media (min-width: 992px){
+    .navbar li {
+        font-family: 'Kanit', sans-serif;
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}
+
+.navbar.scrolled{
+  background-color: #909090;
+  transition: background-color 0.8s linear;
+}
+
+.cover-title h2{
+  font-family: 'Kanit', sans-serif;
+  font-size: 4rem;
+  text-align: left;
+  align-content: center;
+  left:30%;
+  vertical-align: baseline;
+  position:fixed;
   /* transform:translateY(-500%); */
+}
+
+.carousel-caption {
+z-index:10; /*relative position importance of the caption. higher means more at the front*/
+color:#fff;
+top:50%;
+left:3rem;
+bottom:auto;
+
+-webkit-transform:translate(0, -50%); /*transform to fit different browsers*/
+-ms-transform:translate(0, -50%);
+transform:translate(0, -50%);
 }
 
 .carousel-item {
@@ -35,6 +67,7 @@ span {
 	-moz-transition: opacity 0.5s ease;
 
 }
+
 .img-darken:after {
     content: '\A';
     position: absolute;
@@ -49,18 +82,19 @@ span {
 	  -moz-transition: opacity 0.5s;
 }
 
-#jumboCarousel .carousel-caption {
-    right: 58%;
-    text-align: center;
-    max-width: 500px;
-    left: auto;
-    /*top: auto;*/
-  top: 50%;
-  transform: translateY(-50%);
-  bottom: initial;
-  position:absolute;
+/*---------END OF COVER PAGE---------*/
+
+.container-2 {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  vertical-align: baseline;
 }
 
 .portfolio-item {
-  margin-bottom: 30px;
+  height:400px;
+  width:400px;
+  overflow:hidden;
+  position:center;
 }

@@ -3,6 +3,27 @@
   * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
+
+/* change navbar color on scroll*/
+    $(window).scroll(function(){
+    	$('nav').toggleClass('scrolled', $(this).scrollTop() > 700);
+    });
+
+
+/* change transparent navbar to solid on scroll
+$(document).ready(function() {
+        // Transition effect for navbar
+        $(window).scroll(function() {
+          // checks if window is scrolled more than 500px, adds/removes solid class
+          if($(this).scrollTop() > 500) {
+              $('.navbar').addClass('scoll');
+          } else {
+              $('.navbar').removeClass('scroll');
+          }
+        });
+});
+*/
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
